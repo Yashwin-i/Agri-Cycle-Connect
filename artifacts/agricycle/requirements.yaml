@@ -1,0 +1,19 @@
+packages:
+  "framer-motion": "For premium page transitions, scroll-triggered animations, and micro-interactions"
+  "react-hook-form": "For robust form state management and validation"
+  "@hookform/resolvers": "For Zod schema validation integration with react-hook-form"
+  "clsx": "For conditional class string construction"
+  "tailwind-merge": "For safely merging Tailwind CSS classes without style conflicts"
+  "lucide-react": "For beautiful consistent iconography across the platform"
+
+images:
+  - path: "artifacts/agricycle/public/images/hero-bg.png"
+    description: "A breathtaking, slightly abstract overhead view of lush green agricultural fields meeting golden wheat fields, warm golden hour sunlight, clean modern vector art style, elegant, perfect for a modern agritech web platform background."
+    aspect_ratio: "16:9"
+  - path: "artifacts/agricycle/public/images/pattern-bg.png"
+    description: "Subtle, seamless, abstract geometric pattern inspired by leaves and crop rows in extremely light beige and soft pastel green tones, very low contrast, useful for a subtle background texture."
+    aspect_ratio: "16:9"
+
+notes:
+  - API client is fully generated in @workspace/api-client-react.
+  - Authentication relies on session cookies managed by the API (login sets cookie, me reads it).

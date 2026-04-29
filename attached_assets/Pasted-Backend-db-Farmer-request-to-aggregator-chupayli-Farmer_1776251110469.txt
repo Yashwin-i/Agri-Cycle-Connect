@@ -1,0 +1,67 @@
+Backend db
+Farmer request to aggregator chupayli
+Farmers profile building
+In farmer dashboard profile icon
+Land coordinates collection form farmer (by taking exact location)
+Fixing satelite view in farmers page
+When industry post demands requirment it should show on aggregator
+And aggregator request should show industry
+All the backend and db to be done
+Make all the ui a bit more looking good
+And put all the data to be zero and then we will test it
+When farmers put a collection request, aggregator should have the location of that farmer, and as we are gonna take aggregator exact location, there has to be estimate of the distance
+And take industry location for identification for aggregator
+Use some maps to show aggregator where he is and where has to go for farmer and industry,etc
+Profile page for industry to be fixed
+And for all pages make it available in Hindi, english, punjabi as shown in login page
+Route optimal in aggregator to be changed has that components nothing changes
+I want that animation like one after the other is happening and i am getting that route in the map
+And a reset option from start
+And also when aggregator clicked map, can he be redirected to that map in Google maps?
+And demands being shown from factory to aggregator add that section
+
+I guess most of the wroks are done, if yes just check it and leave it if not done implement it, before doing all this if you need anything ask me, what things you need i will provide or we settle and things and you can work , yea let's start
+
+
+Show less
+17 hours ago
+
+1 message & 1 action
+"Put all data to zero" — do you mean wipe the database clean so you can test from scratch with fresh accounts?
+
+Yes, clear the database
+like all the data mean factory should have data which they have after aggregator, and like aggreagator should also see only when some farmer truly applied for a pickup
+For factory demands (what the industry needs) — what information should a factory be able to post? Pick the fields that matter:
+
+Crop type + quantity (tonnes) + price per tonne + deadline
+and the price for this try to make it negotiable with aggregator somehow
+For farmer/aggregator/industry profile pages — should users be able to EDIT their profile (name, phone, location) or just VIEW it?
+
+View + Edit (full profile editing)
+For land coordinates from farmer — how should we collect the exact GPS location?
+
+Both — auto-detect first, then let them adjust on map
+like in some location permissions pop up and if u say yes they take location, in that way
+17 hours ago
+
+Checkpoint made
+17 hours ago
+
+Worked for 30 seconds
+
+32 messages & 68 actions
+
+Checkpoint made
+17 hours ago
+
+Worked for 15 minutes
+can you continue where you left of from yesterday, the ramaining tasks, or tasks you were doing
+
+7 hours ago
+
+Analyzing codebase and logs
+Let me check the logs and current state to pick up right where we left off.
+
+
+2 actions
+You've reached your monthly free quota limit. It will reset on May 12, 2026.

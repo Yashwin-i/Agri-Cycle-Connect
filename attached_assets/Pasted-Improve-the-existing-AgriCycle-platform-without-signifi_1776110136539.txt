@@ -1,0 +1,176 @@
+Improve the existing AgriCycle platform without significantly changing the UI layout or design.
+
+IMPORTANT:
+- Keep current UI structure, colors, and components mostly unchanged
+- Focus on functionality improvements and realism
+- Maintain modular clean code
+
+-------------------------------------
+1. FIX MULTILINGUAL TEXT-TO-SPEECH
+-------------------------------------
+
+Current issue: speech works only in English.
+
+Fix:
+- Use browser SpeechSynthesis API properly
+- Detect selected language (English, Hindi, Punjabi)
+- Dynamically select appropriate voice if available
+
+If exact voice not available:
+- fallback gracefully but still attempt pronunciation
+
+Add:
+- speak button next to important instructions
+- stop button
+
+-------------------------------------
+2. IMPROVE IMAGE ANALYSIS (SMART LOGIC)
+-------------------------------------
+
+Current issue: accepts any random image.
+
+Improve with simulated intelligent logic:
+
+Step 1: Image validation
+- Check file type (must be image)
+- Check size > minimum threshold
+- Reject blank or invalid uploads
+
+Step 2: Simulated crop detection
+Use heuristic logic:
+
+If image name or metadata contains:
+- "rice", "paddy" → Rice straw
+- "wheat" → Wheat straw
+- "corn", "maize" → Maize residue
+
+Else:
+- randomly classify but weighted toward Rice straw
+
+Step 3: Estimate biomass from image + field area
+
+Formula:
+biomass = field area × crop factor
+
+Crop factors:
+Rice = 2.5 tons per acre
+Wheat = 1.8 tons per acre
+Maize = 2.0 tons per acre
+
+Add variation:
+±10% randomness for realism
+
+Step 4: Add "confidence score"
+Display:
+- crop type
+- estimated biomass
+- confidence %
+
+Step 5: Add loading animation:
+"Analyzing image using AI model..."
+
+IMPORTANT:
+Add comments in code:
+"This simulates a computer vision model using heuristics"
+
+-------------------------------------
+3. ADD ACCESSIBILITY MODE (IMPORTANT)
+-------------------------------------
+
+Add a toggle switch: "Accessibility Mode"
+
+When ON:
+- increase font size
+- increase button size
+- increase spacing
+- simplify text (short sentences)
+- high contrast colors
+
+Add icons for actions:
+upload, speak, submit
+
+-------------------------------------
+4. CONNECT FARMER ↔ AGGREGATOR (CRITICAL)
+-------------------------------------
+
+Currently dashboards are not connected.
+
+Implement shared data layer:
+
+When farmer:
+- uploads stubble
+- clicks "Request Pickup"
+
+Store request in database with:
+- farmer name
+- location
+- crop type
+- biomass
+- request status = "pending"
+
+Aggregator dashboard:
+- fetch and display all pending requests
+- show in "Available Farms"
+
+When aggregator:
+- accepts request
+
+Update status:
+"accepted"
+
+Farmer dashboard:
+- show status update:
+"Pickup Scheduled"
+
+-------------------------------------
+5. ADD BASIC STORAGE SYSTEM
+-------------------------------------
+
+Use:
+- SQLite OR JSON file
+
+Store:
+users
+pickup requests
+biomass data
+
+Ensure data persists across refresh
+
+-------------------------------------
+6. IMPROVE MAP + LOCATION
+-------------------------------------
+
+- When farmer adds field, store coordinates
+- Show same coordinates in aggregator dashboard map
+- Clicking farm card highlights map location
+
+-------------------------------------
+7. ADD SMALL REALISM FEATURES
+-------------------------------------
+
+- Add timestamps to requests
+- Add "distance from aggregator" (approximate)
+- Add "estimated pickup time"
+
+-------------------------------------
+8. DO NOT BREAK EXISTING UI
+-------------------------------------
+
+- Keep layout same
+- Do not redesign pages
+- Only enhance functionality
+
+-------------------------------------
+9. CLEAN CODE REQUIREMENT
+-------------------------------------
+
+- Use reusable components
+- Add comments explaining:
+    AI simulation
+    route logic
+    accessibility design
+
+-------------------------------------
+
+Goal:
+Make this prototype feel like a real intelligent system even if backend logic is simulated.
